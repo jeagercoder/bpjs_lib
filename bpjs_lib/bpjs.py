@@ -24,7 +24,7 @@ class Vclaim(Base):
         return headers
 
 
-class AntrianRS(Base):
+class AntrianBPJS(Base):
 
     def get_url(self):
         base_url = settings.BPJS_ANTRIAN_RS_BASE_URL
