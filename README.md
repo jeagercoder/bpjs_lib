@@ -13,7 +13,7 @@ BPJS_ANTRIAN_RS_BASE_URL = ''
 BPJS_ANTRIAN_RS_USER_KEY = ''
 ```
 
-```commandline
+```python
 from bpjs_lib.bpjs import Vclaim
 
 #   Post data
