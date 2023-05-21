@@ -3,6 +3,7 @@ import hashlib
 import base64
 import lzstring
 from Crypto.Cipher import AES
+import json
 
 
 def generate_signature(secret, message):
@@ -25,5 +26,5 @@ def decrypt_data(
     decrypt = AES.new(key_hash[0:32], AES.MODE_CBC, IV=key_hash[0:16])
     plain = decrypt.decrypt(base64.b64decode(data))
     decompress = lz.decompressFromEncodedURIComponent(plain.decode())
-    return decompress
+    return json.loads(decompress)
 
